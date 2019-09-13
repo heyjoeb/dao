@@ -38,7 +38,7 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <nav class="navbar navbar-expand-md" role="navigation">
+    <nav class="navbar navbar-expand-md fixed-top" role="navigation">
       <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/daoLogo.png" alt="DAO - Del LLano Alto Oléico">

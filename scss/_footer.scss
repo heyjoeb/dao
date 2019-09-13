@@ -1,0 +1,57 @@
+.main-footer {
+  padding: 30px 70px;
+  background-color: $black;
+  color: #fff;
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    color: #fff;
+  }
+  .links-footer {
+    &-list {
+      margin-right: 70px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-item {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .social {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        font-size: 0;
+      }
+    }
+    .facebook {
+      a {
+        background-image: url('../daoTheme/images/facebook-icon.svg');
+      }
+    }
+    .twitter {
+      a {
+        background-image: url('../daoTheme/images/twitter-icon.svg');
+      }
+    }
+    .instagram {
+      a {
+        background-image: url('../daoTheme/images/instagram-icon.svg');
+      }
+    }
+  }
+}

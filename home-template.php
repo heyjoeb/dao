@@ -6,16 +6,17 @@ get_header(); ?>
 
 
         <section class="main-slider-container">
-            <ul class="main-slider">
+            <div class="main-slider">
             	<?php
 		        // check if the repeater field has rows of data
 		        if( have_rows('slides') ):
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
-                	<li>
+                	<div class="main-slider-slide">
 	                  <article>
 	                    <h1><?php the_sub_field('texto') ;?></h1>
-	                    <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="cargo"><?php the_sub_field('cargo') ;?></p>
 	                  </article>
 	                  <picture>
 	                    <source media="(max-width: 575px)" srcset="<?php the_sub_field('imagen_sm') ;?>">
@@ -24,13 +25,13 @@ get_header(); ?>
 	                    <source media="(max-width: 1199px)" srcset="<?php the_sub_field('imagen_xl') ;?>">
 	                    <img class="img-fluid" src="<?php the_sub_field('imagen_principal') ;?>" alt="">
 	                  </picture>
-	                </li>
+	                </div>
 		        <?php endwhile;
 		    	else :
 		    	// no rows found
 		    	endif;
 		    	?>
-            </ul>
+            </div>
             <div class="slider-nav-arrows">
                 <ul>
                   <li><a href="" class="nav-arrow-slider btn-prev"></a></li>
@@ -39,7 +40,7 @@ get_header(); ?>
             </div>
         </section><!--/.main-slider-container -->
 
-        <section class="intro-col">
+        <section class="a-section intro-col">
           <div class="container">
             <div class="row">
               <?php
@@ -59,16 +60,18 @@ get_header(); ?>
           </div><!-- .container -->
         </section><!-- .intro-col -->
 
-        <section class="full-width-img">
+        <section class="full-width-img section-tan">
           <div class="container-fluid px-0">
             <div class="row no-gutters">
               <div class="col-12">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
                   <div class="row">
-                    <div class="col-12">
-                      <?php the_field('texto_cita') ;?>
-                      <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>
+                    <div class="col-12 py-5 my-5 text-center">
+                      <p class="quote-text mb-0">
+                        <?php the_field('texto_cita') ;?>
+                        <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>
+                      </p>
                     </div><!-- .col -->
                   </div><!-- .row -->
                 </div><!-- .container -->
@@ -78,22 +81,22 @@ get_header(); ?>
           </div><!-- .container -->
         </section><!-- full-width-img -->
 
-        <section class="updates">
+        <section class="updates a-section" style="background-image: url('<?php the_field('fondo_noticias') ;?>');">
           <div class="container">
-            <div class="row">
+            <div class="row px-4">
               <div class="col-md-12">
-                <h2><?php the_field('titulo_noticias') ;?></h2>
+                <h2 class="text-center py-5"><?php the_field('titulo_noticias') ;?></h2>
               </div><!-- .col -->
-              <div class="col-md-6">
-                  <img class="img-fluid" src="<?php the_field('imagen_noticia1') ;?>" alt="">
+              <div class="col-md-6 px-4">
+                  <img class="img-full-width mb-4" src="<?php the_field('imagen_noticia1') ;?>" alt="">
                   <?php the_field('texto_noticia1') ;?>
               </div>
-              <div class="col-md-6">
-                  <img class="img-fluid" src="<?php the_field('imagen_noticia2') ;?>" alt="">
+              <div class="col-md-6 px-4">
+                  <img class="img-full-width mb-4" src="<?php the_field('imagen_noticia2') ;?>" alt="">
                   <?php the_field('texto_noticia2') ;?>
               </div>
               <div class="col-md-12 text-center">
-                <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">
+                <img class="img-fluid mb-4" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->

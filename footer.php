@@ -1,13 +1,13 @@
-<div class="container-fluid">
-  <div class="row">
+<footer class="main-footer container-fluid">
+  <div class="row align-items-center">
     <div class="col-md-3">
       <img class="img-fluid" src="<?php the_field('logo_footer', 'option'); ?>" alt="dao">
     </div>
     <div class="col-md-3">
       <?php the_field('columna_texto_footer', 'option'); ?>
     </div>
-    <div class="col-md-3">
-      <ul>
+    <div class="col-md-3 links-footer d-flex">
+      <ul class="links-footer-list">
         <?php
 
                 // check if the repeater field has rows of data
@@ -16,7 +16,7 @@
                   while ( have_rows('menu_links', 'option') ) : the_row();
                   ?>
 
-                  <li class="link-footer">
+                  <li class="links-footer-item">
                   <?php
 
                   $link = get_sub_field('menu_link', 'option');
@@ -35,13 +35,13 @@
                 endif;
         ?>
       </ul>
-      <ul>
+      <ul class="links-footer-list">
         <?php
                 // check if the repeater field has rows of data
                 if( have_rows('menu_links2', 'option') ):
                 // loop through the rows of data
                   while ( have_rows('menu_links2', 'option') ) : the_row();?>
-                  <li class="link-footer">
+                  <li class="links-footer-item">
                   <?php
 
                   $link = get_sub_field('menu_link', 'option');
@@ -62,14 +62,14 @@
       </ul>
     </div><!-- .col -->
     <div class="col-md-3">
-    <ul class="social">
+    <ul class="social text-right">
         <?php
                 // check if the repeater field has rows of data
                 if( have_rows('social_links', 'option') ):
                 // loop through the rows of data
                   while ( have_rows('social_links', 'option') ) : the_row();?>
                   <li class="link-footer <?php the_sub_field('social_link_name', 'option') ;?>">
-                    <a href="<?php the_sub_field('social_link', 'option') ;?>"><?php the_sub_field('social_link_name', 'option') ;?></a>
+                    <a target="_blank" href="<?php the_sub_field('social_link', 'option') ;?>"><?php the_sub_field('social_link_name', 'option') ;?></a>
                   </li><!-- .li -->
                 <?php endwhile;
                 else :
@@ -79,7 +79,7 @@
       </ul>
     </div>
   </div><!-- .row -->
-</div><!-- .container-fluid -->
+</footer><!-- .container-fluid -->
 
 
     <?php wp_footer(); ?>

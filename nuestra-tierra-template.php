@@ -6,16 +6,17 @@ get_header(); ?>
 
 
         <section class="main-slider-container">
-            <ul class="main-slider">
+            <div class="main-slider">
             	<?php
 		        // check if the repeater field has rows of data
 		        if( have_rows('slides') ):
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
-                	<li>
+                	<div class="main-slider-slide">
 	                  <article>
 	                    <h1><?php the_sub_field('texto') ;?></h1>
-	                    <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="cargo"><?php the_sub_field('cargo') ;?></p>
 	                  </article>
 	                  <picture>
 	                    <source media="(max-width: 575px)" srcset="<?php the_sub_field('imagen_sm') ;?>">
@@ -24,13 +25,13 @@ get_header(); ?>
 	                    <source media="(max-width: 1199px)" srcset="<?php the_sub_field('imagen_xl') ;?>">
 	                    <img class="img-fluid" src="<?php the_sub_field('imagen_principal') ;?>" alt="">
 	                  </picture>
-	                </li>
+	                </div>
 		        <?php endwhile;
 		    	else :
 		    	// no rows found
 		    	endif;
 		    	?>
-            </ul>
+            </div>
             <div class="slider-nav-arrows">
                 <ul>
                   <li><a href="" class="nav-arrow-slider btn-prev"></a></li>
@@ -45,8 +46,10 @@ get_header(); ?>
               <div class="col-12">
                 <div class="container">
                   <div class="row">
-                    <div class="col-12 text-center">
-                      <?php the_field('texto_cita') ;?>
+                    <div class="col-12 text-center py-5 my-5">
+                      <p class="quote-text mb-0">
+                        <?php the_field('texto_cita') ;?>
+                      </p>
                     </div><!-- .col -->
                   </div><!-- .row -->
                 </div><!-- .container -->
@@ -57,17 +60,17 @@ get_header(); ?>
         </section><!-- full-width-img -->
 
         <section class="green-row">
-          <div class="container-fluid px-0">
+          <div class="container-fluid">
             <div class="row">
-              <div class="col-12 text-center">
+              <div class="col-12 text-center py-5 my-5">
               <?php the_field('texto_cita_verde') ;?>
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- .green-row -->
 
-        <section class="closer-image">
-          <div class="container-fluid px-0">
+        <section class="closer-image a-section">
+          <div class="container-fluid">
             <div class="row">
               <div class="col-12 text-center">
               <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">

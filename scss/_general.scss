@@ -1,0 +1,83 @@
+// fonts
+html, body {
+  font-family: 'Muli', sans-serif;
+}
+.quote-text {
+  @include lg-text;
+  span {
+    display: block;
+  }
+}
+.txt-highlight {
+  font-weight: 600;
+  color: $green;
+  @include hero-text;
+}
+// links and buttons
+a {
+  @include effect-all;
+  opacity: 1;
+  &:hover, &:active, &:focus {
+    @include effect-all;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+button {
+  @include effect-all;
+  &:hover, &:active, &:focus {
+    @include effect-all;
+  }
+}
+// layout
+.a-section {
+  padding: 70px 0;
+}
+.section-tan {
+  background-color: $tan;
+}
+.updates {
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    background-color: #fff;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    @include lg-text;
+  }
+}
+.green-row {
+  background-color: $green;
+  color: #fff;
+  p {
+    font-weight: 600;
+    @include hero-text;
+  }
+}
+.modelo {
+  .section-tan {
+    border-top: 15px solid $green;
+    p {
+      font-weight: 700;
+    }
+  }
+}
+.quote-with-image {
+  padding: 70px 0;
+  &.green {
+    background-color: $green;
+    color: #fff;
+  }
+}
+// images
+.img-full-width {
+  width: 100%;
+}
+// lists
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
