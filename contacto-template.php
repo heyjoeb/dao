@@ -5,17 +5,18 @@ get_header(); ?>
 <div class="contacto">
 
 
-        <section class="main-slider-container">
-            <ul class="main-slider">
+<section class="main-slider-container">
+            <div class="main-slider">
             	<?php
 		        // check if the repeater field has rows of data
 		        if( have_rows('slides') ):
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
-                	<li>
-	                  <article>
+                	<div class="main-slider-slide">
+	                  <article class="animate-element slide-up">
 	                    <h1><?php the_sub_field('texto') ;?></h1>
-	                    <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="autor"><?php the_sub_field('autor') ;?></p>
+                      <p class="cargo"><?php the_sub_field('cargo') ;?></p>
 	                  </article>
 	                  <picture>
 	                    <source media="(max-width: 575px)" srcset="<?php the_sub_field('imagen_sm') ;?>">
@@ -24,13 +25,13 @@ get_header(); ?>
 	                    <source media="(max-width: 1199px)" srcset="<?php the_sub_field('imagen_xl') ;?>">
 	                    <img class="img-fluid" src="<?php the_sub_field('imagen_principal') ;?>" alt="">
 	                  </picture>
-	                </li>
+	                </div>
 		        <?php endwhile;
 		    	else :
 		    	// no rows found
 		    	endif;
 		    	?>
-            </ul>
+            </div>
             <div class="slider-nav-arrows">
                 <ul>
                   <li><a href="" class="nav-arrow-slider btn-prev"></a></li>
@@ -39,10 +40,10 @@ get_header(); ?>
             </div>
         </section><!--/.main-slider-container -->
 
-        <section class="info-contacto">
+        <section class="info-contacto section-tan a-section">
           <div class="container">
-            <div class="row">
-              <div class="col-12">
+            <div class="row animate-element slide-up">
+              <div class="col-12 text-center mb-5 pb-5 contact-items">
                 <ul>
                   <li>
                     <h2>Contacto</h2>
@@ -58,18 +59,20 @@ get_header(); ?>
                   </li>
                 </ul>
               </div><!-- .col -->
-              <div class="col-12 text-center">
+              <div class="col-12 text-center animate-element slide-up">
                 <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- .info-contacto -->
 
-        <section class="map">
+        <section class="map section-tan">
           <div class="container-fluid px-0">
-            <div class="row">
+            <div class="row no-gutters animate-element slide-up">
               <div class="col-md-12">
-                <div id="map">mapa</div>
+                <div id="map">
+                  <?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
+                </div>
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
@@ -77,7 +80,7 @@ get_header(); ?>
 
         <section class="closer-image">
           <div class="container-fluid px-0">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col-md-12">
                 <img class="img-fluid" src="<?php the_field('imagen_cierre') ;?>" alt="">
               </div><!-- .col -->

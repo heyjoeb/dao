@@ -1,8 +1,69 @@
 .navbar {
+  @include effect-all;
   .nav-link {
     color: #fff;
     font-weight: 600;
     padding-right: .7rem;
     padding-left: .7rem;
+  }
+  .navbar-brand {
+    img {
+      @include effect-all;
+      width: 185px;
+    }
+  }
+}
+.is-scrolling {
+  .navbar {
+    @include effect-all;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .navbar-brand {
+    img {
+      @include effect-all;
+      width: 120px;
+    }
+  }
+}
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background-color:#fff;
+  display: block;
+  transition: all 0.2s;
+  margin-top: 4px
+}
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+  &.collapsed {
+    .top-bar {
+      transform: rotate(0);
+    }
+    .middle-bar {
+      opacity: 1;
+    }
+    .bottom-bar {
+      transform: rotate(0);
+    }
+  }
+}
+.navbar-collapse {
+  text-align: center;
+}
+.current-menu-item {
+  .nav-link {
+    text-decoration: underline;
   }
 }

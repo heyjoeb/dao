@@ -1,0 +1,53 @@
+body.login div#login h1 a {
+	height: 91px;
+	width: 184px;
+	background-image: url('../images/daoLogoDark.png');
+	-webkit-background-size: auto;
+	background-size: auto;
+}
+body.login {
+	background-color: #fff;
+	font-family: 'Work Sans', sans-serif;
+  	color: #141414;
+}
+.login label {
+	color: #141414;
+}
+body.login div#login {
+	padding-top: 20px;
+}
+.login .button-primary {
+	background-color: #141414;
+	border:  solid 2px #141414;
+	border-radius: 0;
+	color: #fff;
+	box-shadow: none;
+	text-shadow: none;
+	font-weight: 600;
+	height: 50px !important;
+	line-height: 50px !important;
+	transition: all 0.5s ease;
+}
+.login .button-primary:hover {
+	text-shadow: none;
+	transition: all 0.5s ease;
+	background-color: #ECECEF;
+	border-color: #ECECEF;
+	color: #141414;
+}
+.login .button-primary:focus {
+	text-shadow: none;
+	transition: all 0.5s ease;
+	background-color: #ECECEF;
+	border-color: #ECECEF;
+	color: #141414;
+}
+.login form {
+	box-shadow: none;
+	border:  solid 1px #141414;
+}
+.login input[type=text], .login input[type=password], .login input[type=email] {
+	border:  solid 1px #141414;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}

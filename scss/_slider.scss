@@ -15,12 +15,28 @@
   article {
     position: absolute;
     z-index: 1;
-    width: 70%;
+    width: 760px;
     text-align: center;
     left: 50%;
-    margin-left: -35%;
+    margin-left: -380px;
     color: #fff;
-    top: 60%;
+    @include media-breakpoint-up(xl) {
+      top: 50%;
+    }
+    @include media-breakpoint-down(xl) {
+      top: 40%;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 90%;
+      margin-left: -45%;
+      top: 40%;
+    }
+    @include media-breakpoint-down(sm) {
+      top: 30%;
+    }
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
   h1 {
     @include hero-text;
@@ -65,4 +81,11 @@
 }
 .slider-nav-arrows {
   display: none;
+}
+.productos {
+  picture {
+    &:before {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+    };
+  }
 }

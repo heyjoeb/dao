@@ -11,7 +11,7 @@ get_header(); ?>
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
                 	<div class="main-slider-slide">
-	                  <article>
+	                  <article class="animate-element slide-up">
 	                    <h1><?php the_sub_field('texto') ;?></h1>
                       <p class="autor"><?php the_sub_field('autor') ;?></p>
                       <p class="cargo"><?php the_sub_field('cargo') ;?></p>
@@ -40,8 +40,8 @@ get_header(); ?>
 
         <section class="two-col a-section">
           <div class="container">
-            <div class="row">
-              <div class="col-md-8">
+            <div class="row animate-element slide-up">
+              <div class="col-md-8 pr-5">
                 <?php the_field('texto_intro') ;?>
               </div><!-- .col -->
               <div class="col-md-4 section-tan text-center pt-5">
@@ -56,13 +56,13 @@ get_header(); ?>
         </section><!-- .two-col -->
 
 
-        <section class="full-width-img">
+        <section class="full-width-img section-tan">
           <div class="container-fluid px-0">
             <div class="row no-gutters">
               <div class="col-12">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
-                  <div class="row">
+                  <div class="row animate-element slide-up">
                     <div class="col-12 py-5 my-5 text-center">
                       <div class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
@@ -80,9 +80,9 @@ get_header(); ?>
 
         <section class="quote-with-image green text-center">
           <div class="container">
-            <div class="row">
+            <div class="row animate-element slide-up">
               <div class="col-md-4">
-                <img class="img-fluid" src="<?php the_field('imagen_cita_verde') ;?>" alt="">
+                <img class="img-fluid mb-5 mb-md-0" src="<?php the_field('imagen_cita_verde') ;?>" alt="">
               </div><!-- .col -->
               <div class="col-md-8">
                 <?php the_field('texto_cita_verde') ;?>
@@ -94,15 +94,15 @@ get_header(); ?>
         <section class="closing-quote">
           <div class="container-fluid px-0">
             <div class="row no-gutters">
-              <div class="col-md-3">
-                <img class="img-fluid" src="<?php the_field('imagen_cita') ;?>" alt="">
+              <div class="col-lg-3">
+                <img class="img-full-width d-none d-lg-block" src="<?php the_field('imagen_cita') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-md-6 text-center">
-                <?php the_field('texto_cita') ;?>
-                <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">
+              <div class="col-lg-6 text-center px-5 align-self-center animate-element slide-up negative-margin">
+                <div class="pb-5 mb-5"><?php the_field('texto_cita') ;?></div>
+                <img class="img-fluid quote-image-close" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-md-3">
-                <img class="img-fluid" src="<?php the_field('imagen_cita2') ;?>" alt="">
+              <div class="col-lg-3">
+                <img class="img-full-width" src="<?php the_field('imagen_cita2') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->

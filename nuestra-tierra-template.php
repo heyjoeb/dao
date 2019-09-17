@@ -13,7 +13,7 @@ get_header(); ?>
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
                 	<div class="main-slider-slide">
-	                  <article>
+	                  <article class="animate-element slide-up">
 	                    <h1><?php the_sub_field('texto') ;?></h1>
                       <p class="autor"><?php the_sub_field('autor') ;?></p>
                       <p class="cargo"><?php the_sub_field('cargo') ;?></p>
@@ -42,7 +42,7 @@ get_header(); ?>
 
         <section class="full-width-img">
           <div class="container-fluid px-0">
-            <div class="row no-gutters">
+            <div class="row no-gutters animate-element slide-up">
               <div class="col-12">
                 <div class="container">
                   <div class="row">
@@ -61,7 +61,7 @@ get_header(); ?>
 
         <section class="green-row">
           <div class="container-fluid">
-            <div class="row">
+            <div class="row animate-element slide-up">
               <div class="col-12 text-center py-5 my-5">
               <?php the_field('texto_cita_verde') ;?>
               </div><!-- .col -->
@@ -71,7 +71,7 @@ get_header(); ?>
 
         <section class="closer-image a-section">
           <div class="container-fluid">
-            <div class="row">
+            <div class="row animate-element slide-up">
               <div class="col-12 text-center">
               <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->

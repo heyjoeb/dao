@@ -30,6 +30,16 @@ button {
   }
 }
 // layout
+button:focus {
+  outline-color: transparent;
+}
+body {
+  @include effect-opacity;
+}
+.fade-out {
+  opacity: 0;
+  @include effect-opacity;
+}
 .a-section {
   padding: 70px 0;
 }
@@ -63,12 +73,118 @@ button {
       font-weight: 700;
     }
   }
+  .closing-quote {
+    @include lg-text;
+    color: $light-gray;
+    p {
+      position: relative;
+      &:after {
+        position: absolute;
+        left: 50%;
+        bottom: -90px;
+        margin-left: -47px;
+        display: inline-block;
+        content: "";
+        width: 94px;
+        height: 65px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(../daoTheme/images/close-quote.png);
+      }
+      &:before {
+        position: absolute;
+        left: 50%;
+        top: -90px;
+        margin-left: -47px;
+        display: inline-block;
+        content: "";
+        width: 94px;
+        height: 65px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url(../daoTheme/images/open-quote.png);
+      }
+    }
+    .quote-image-close {
+      margin-top: 25px;
+    }
+  }
+  .negative-margin {
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 150px;
+      padding-bottom: 70px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 .quote-with-image {
   padding: 70px 0;
+  h1, h2, h3, h4, h5 {
+    @include hero-text;
+    font-weight: 700;
+  }
+  p {
+    @include hero-text;
+    margin-bottom: 0;
+  }
   &.green {
     background-color: $green;
     color: #fff;
+  }
+  &.white {
+    color: $green;
+  }
+}
+.productos {
+  .three-col {
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .quote {
+    p {
+      @include lg-text;
+    }
+  }
+}
+.como {
+  .process {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .dao-absolute {
+    margin-bottom: -220px;
+    position: relative;
+    z-index: 1;
+  }
+  .a-quote {
+    @include lg-text;
+  }
+  .green-row {
+    p {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
+  .wrapper-texto-proceso {
+    background-color: #fff;
+    padding: 30px;
+    border-top: 10px solid $green;
+  }
+}
+.contacto {
+  .contact-items {
+    h2 {
+      @include lg-text;
+      font-weight: 700;
+    }
+    li {
+      margin-bottom: 25px;
+    }
   }
 }
 // images
@@ -80,4 +196,18 @@ ul {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
+}
+// wpml
+.wpml-ls-statics-footer {
+  border-top: 1px solid $gray;
+}
+.wpml-ls-statics-footer, .wpml-ls-statics-footer .wpml-ls-sub-menu, .wpml-ls-statics-footer a {
+  border-bottom: 0;
+  color: #fff;
+  margin-bottom: 0 !important;
+  background-color: $black;
+}
+.wpml-ls-statics-footer a:hover {
+  background-color: transparent;
+  color:#fff;
 }

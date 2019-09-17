@@ -1,12 +1,12 @@
 <footer class="main-footer container-fluid">
-  <div class="row align-items-center">
-    <div class="col-md-3">
+  <div class="row align-items-center animate-element slide-up">
+    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 text-center text-md-left">
       <img class="img-fluid" src="<?php the_field('logo_footer', 'option'); ?>" alt="dao">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 text-center text-md-right text-lg-left">
       <?php the_field('columna_texto_footer', 'option'); ?>
     </div>
-    <div class="col-md-3 links-footer d-flex">
+    <div class="col-md-6 col-lg-3 mb-sm-5 text-center text-md-left mb-md-0 links-footer d-md-flex">
       <ul class="links-footer-list">
         <?php
 
@@ -61,8 +61,8 @@
         ?>
       </ul>
     </div><!-- .col -->
-    <div class="col-md-3">
-    <ul class="social text-right">
+    <div class="col-md-6 col-lg-3">
+    <ul class="social text-center text-md-right">
         <?php
                 // check if the repeater field has rows of data
                 if( have_rows('social_links', 'option') ):

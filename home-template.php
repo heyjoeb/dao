@@ -13,7 +13,7 @@ get_header(); ?>
 		        // loop through the rows of data
 		        	while ( have_rows('slides') ) : the_row();?>
                 	<div class="main-slider-slide">
-	                  <article>
+	                  <article class="animate-element slide-up">
 	                    <h1><?php the_sub_field('texto') ;?></h1>
                       <p class="autor"><?php the_sub_field('autor') ;?></p>
                       <p class="cargo"><?php the_sub_field('cargo') ;?></p>
@@ -42,7 +42,7 @@ get_header(); ?>
 
         <section class="a-section intro-col">
           <div class="container">
-            <div class="row">
+            <div class="row animate-element slide-up">
               <?php
               // check if the repeater field has rows of data
               if( have_rows('columnas') ):
@@ -66,7 +66,7 @@ get_header(); ?>
               <div class="col-12">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
-                  <div class="row">
+                  <div class="row animate-element slide-up">
                     <div class="col-12 py-5 my-5 text-center">
                       <p class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
@@ -83,7 +83,7 @@ get_header(); ?>
 
         <section class="updates a-section" style="background-image: url('<?php the_field('fondo_noticias') ;?>');">
           <div class="container">
-            <div class="row px-4">
+            <div class="row px-4 animate-element slide-up">
               <div class="col-md-12">
                 <h2 class="text-center py-5"><?php the_field('titulo_noticias') ;?></h2>
               </div><!-- .col -->

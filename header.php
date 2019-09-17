@@ -35,16 +35,19 @@
     <?php wp_head(); ?>
   </head>
   <body class="dao fade-out">
+  <div id="scrolTop"></div>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <nav class="navbar navbar-expand-md fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
       <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/daoLogo.png" alt="DAO - Del LLano Alto Oléico">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
       </button>
         <?php
         wp_nav_menu( array(
