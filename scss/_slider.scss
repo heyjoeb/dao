@@ -21,19 +21,9 @@
     left: 50%;
     margin-left: -380px;
     color: #fff;
-    @include media-breakpoint-up(xl) {
-      top: 65%;
-    }
-    @include media-breakpoint-down(xl) {
-      top: 55%;
-    }
-    @include media-breakpoint-down(lg) {
-      width: 90%;
-      margin-left: -45%;
-      top: 50%;
-    }
+    bottom: 5%;
     @include media-breakpoint-down(sm) {
-      top: 40%;
+      bottom: 10%;
     }
     @include media-breakpoint-down(xs) {
       display: none;
@@ -102,7 +92,6 @@
       width: 100%;
       left: 0;
       margin-left: 0;
-      top: auto;
       bottom: 0;
       background-color: rgba(0,0,0,0.8);
       .article-wrapper {
