@@ -6,7 +6,7 @@
 
 	// ADD FONTS
 	function dao_google_fonts() {
-	wp_enqueue_style( 'dao-google-fonts', 'https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap', false );
+	wp_enqueue_style( 'dao-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|PT+Serif:400i&display=swap', false );
 	}
 	add_action( 'wp_enqueue_scripts', 'dao_google_fonts' );
 

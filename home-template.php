@@ -15,8 +15,10 @@ get_header(); ?>
                 	<div class="main-slider-slide">
 	                  <article class="animate-element slide-up">
 	                    <h1><?php the_sub_field('texto') ;?></h1>
-                      <p class="autor"><?php the_sub_field('autor') ;?></p>
-                      <p class="cargo"><?php the_sub_field('cargo') ;?></p>
+                      <div class="author-wrapper">
+                        <p class="autor"><?php the_sub_field('autor') ;?></p>
+                        <p class="cargo"><?php the_sub_field('cargo') ;?></p>
+                      </div>
 	                  </article>
 	                  <picture>
 	                    <source media="(max-width: 575px)" srcset="<?php the_sub_field('imagen_sm') ;?>">
@@ -83,9 +85,9 @@ get_header(); ?>
 
         <section class="updates a-section" style="background-image: url('<?php the_field('fondo_noticias') ;?>');">
           <div class="container">
-            <div class="row px-4 animate-element slide-up">
-              <div class="col-md-12">
-                <h2 class="text-center py-5"><?php the_field('titulo_noticias') ;?></h2>
+            <div class="row px-3 animate-element slide-up">
+              <div class="col-md-12 text-center py-5">
+                <h2 class=""><?php the_field('titulo_noticias') ;?></h2>
               </div><!-- .col -->
               <div class="col-md-6 px-4">
                   <img class="img-full-width mb-4" src="<?php the_field('imagen_noticia1') ;?>" alt="">
@@ -95,7 +97,7 @@ get_header(); ?>
                   <img class="img-full-width mb-4" src="<?php the_field('imagen_noticia2') ;?>" alt="">
                   <?php the_field('texto_noticia2') ;?>
               </div>
-              <div class="col-md-12 text-center">
+              <div class="col-md-12 text-center mt-4">
                 <img class="img-fluid mb-4" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->

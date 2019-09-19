@@ -1,15 +1,38 @@
 // fonts
 html, body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Lato', sans-serif;
+  color: $default-gray;
+}
+strong {
+  font-weight: 700;
 }
 .quote-text {
   @include lg-text;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
   span {
     display: block;
   }
+  p {
+    font-weight: 400;
+  }
+}
+.quote-text2 {
+  @include lg-text;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+  span {
+    display: block;
+  }
+  p {
+    font-weight: 400;
+  }
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .txt-highlight {
-  font-weight: 600;
+  font-weight: 700;
   color: $green;
   @include hero-text;
 }
@@ -46,6 +69,12 @@ body {
 .section-tan {
   background-color: $tan;
 }
+.section-gray {
+  background-color: #eaeaea;
+  p {
+    font-weight: 600;
+  }
+}
 .updates {
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,22 +84,48 @@ body {
   h2 {
     text-transform: uppercase;
     font-weight: 700;
-    @include lg-text;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    &:before, &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      width: 2px;
+      height: 40px;
+      background-color: $default-gray;
+    }
+    &:before {
+      left: -20px;
+    }
+    &:after {
+      right: -20px;
+    }
   }
 }
 .green-row {
   background-color: $green;
   color: #fff;
   p {
-    font-weight: 600;
+    font-weight: 700;
     @include hero-text;
   }
 }
 .modelo {
-  .section-tan {
+  .slick-dots {
+    display: none;
+  }
+  .section-gray {
     border-top: 15px solid $green;
-    p {
-      font-weight: 700;
+  }
+  .quote-text {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    .txt-highlight {
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      color: $default-gray;
     }
   }
   .closing-quote {
@@ -106,7 +161,7 @@ body {
       }
     }
     .quote-image-close {
-      margin-top: 25px;
+      margin-top: 45px;
     }
   }
   .negative-margin {
@@ -140,6 +195,9 @@ body {
   }
 }
 .productos {
+  .slick-dots {
+    display: none;
+  }
   .three-col {
     p {
       margin-bottom: 0;
@@ -155,6 +213,64 @@ body {
   .process {
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 100px 0;
+    .step-button {
+      border: 0;
+      background-color: $light-green;
+      color: $gray;
+      border-radius: 50%;
+      width: 230px;
+      height: 230px;
+      padding: 15px;
+      border: 10px solid $tan;
+      @include effect_all;
+      &:hover, &:active, &:focus {
+        background-color: $green;
+        color: #fff;
+        @include effect_all;
+      }
+      span {
+        display: block;
+      }
+    }
+    .step-number {
+      @include hero-text;
+      font-weight: 700;
+      color: $orange;
+      margin-bottom: 10px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      background-color: $tan;
+      border-radius: 50%;
+    }
+    .step-title {
+      @include lg-text;
+    }
+    .modal-header {
+      border-top: 10px solid $light-green;
+      border-radius: 2px 2px 0 0;
+    }
+    .modal-title {
+      color: $green;
+    }
+    .daoIcon {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: 24px;
+      height: 31px;
+      background-size: 100%;
+      background: url(../daoTheme/images/daoIcon.png);
+      background-repeat: no-repeat;
+    }
+    .modal-body {
+      position: relative;
+      padding-bottom: 70px;
+    }
   }
   .dao-absolute {
     margin-bottom: -220px;
@@ -163,6 +279,7 @@ body {
   }
   .a-quote {
     @include lg-text;
+    color: $black;
   }
   .green-row {
     p {
@@ -170,13 +287,17 @@ body {
       margin-bottom: 0;
     }
   }
-  .wrapper-texto-proceso {
-    background-color: #fff;
-    padding: 30px;
-    border-top: 10px solid $green;
+  .step-wrapper {
+    margin-bottom: 50px;
+  }
+  .slick-dots {
+    display: none;
   }
 }
 .contacto {
+  .slick-dots {
+    display: none;
+  }
   .contact-items {
     h2 {
       @include lg-text;
@@ -185,6 +306,20 @@ body {
     li {
       margin-bottom: 25px;
     }
+  }
+}
+.nuestra-tierra {
+  h1, h2, h3, h4, h5 {
+    @include lg-text;
+    font-weight: 700;
+  }
+  .causes {
+    img {
+      width: 100%;
+    }
+  }
+  .slick-dots {
+    display: none;
   }
 }
 // images

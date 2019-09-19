@@ -42,8 +42,8 @@ get_header(); ?>
 
         <section class="two-col a-section">
           <div class="container">
-            <div class="row animate-element slide-up">
-              <div class="col-md-8">
+            <div class="row animate-element slide-up justify-content-center">
+              <div class="col-md-6">
                 <?php the_field('texto_intro') ;?>
               </div><!-- .col -->
               <div class="col-md-4 text-center">
@@ -72,7 +72,7 @@ get_header(); ?>
           </div><!-- .container -->
         </section><!-- full-width-img -->
 
-        <section class="green-row a-section">
+        <section class="green-row py-5">
           <div class="container-fluid px-0">
             <div class="row no-gutters animate-element slide-up">
               <div class="col-12 text-center">
@@ -84,15 +84,40 @@ get_header(); ?>
 
         <section class="process a-section" style="background-image: url('<?php the_field('fondo_proceso') ;?>');">
           <div class="container">
-            <div class="row justify-content-center animate-element slide-up">
-              <div class="col-md-3 text-center">
-                <img class="img-fluid" src="<?php the_field('imagen_proceso') ;?>" alt="">
-              </div><!-- .col -->
-              <div class="col-md-6">
-                <div class="wrapper-texto-proceso">
-                  <?php the_field('texto_proceso') ;?>
-                </div>
-              </div><!-- .col -->
+            <div class="row justify-content-center">
+              <?php
+                // check if the repeater field has rows of data
+                if( have_rows('pasos') ):
+                // loop through the rows of data
+                  while ( have_rows('pasos') ) : the_row();?>
+                  <div class="col-md-4 text-center step-wrapper">
+                    <button class="step-button text-center" data-toggle="modal" data-target="#<?php the_sub_field('link_paso') ;?>">
+                      <span class="step-number"><?php the_sub_field('numero_paso') ;?></span>
+                      <span class="step-title"><?php the_sub_field('titulo_paso') ;?></span>
+                    </button>
+                  </div><!-- .col -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="<?php the_sub_field('link_paso') ;?>" tabindex="-1" role="dialog" aria-labelledby="<?php the_sub_field('link') ;?>Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="<?php the_sub_field('link_paso') ;?>Label"><?php the_sub_field('titulo_paso') ;?></h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <?php the_sub_field('texto_paso') ;?>
+                          <div class="daoIcon"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <?php endwhile;
+                else :
+                // no rows found
+                endif;
+              ?>
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- .process -->

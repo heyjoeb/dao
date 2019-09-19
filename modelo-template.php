@@ -44,7 +44,7 @@ get_header(); ?>
               <div class="col-md-8 pr-5">
                 <?php the_field('texto_intro') ;?>
               </div><!-- .col -->
-              <div class="col-md-4 section-tan text-center pt-5">
+              <div class="col-md-4 section-gray text-center pt-5">
                 <img class="img-fluid pb-4" src="<?php the_field('imagen_intro') ;?>" alt="">
                 <?php the_field('texto_imagen_intro') ;?>
               </div><!-- .col -->
@@ -62,8 +62,8 @@ get_header(); ?>
               <div class="col-12">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
-                  <div class="row animate-element slide-up">
-                    <div class="col-12 py-5 my-5 text-center">
+                  <div class="row animate-element slide-up justify-content-center">
+                    <div class="col-lg-10 py-5 my-5 text-center">
                       <div class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
                         <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>
@@ -80,11 +80,11 @@ get_header(); ?>
 
         <section class="quote-with-image green text-center">
           <div class="container">
-            <div class="row animate-element slide-up">
-              <div class="col-md-4">
+            <div class="row animate-element slide-up justify-content-center align-items-center">
+              <div class="col-md-3">
                 <img class="img-fluid mb-5 mb-md-0" src="<?php the_field('imagen_cita_verde') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-md-8">
+              <div class="col-md-7">
                 <?php the_field('texto_cita_verde') ;?>
               </div><!-- .col -->
             </div><!-- .row -->
@@ -93,15 +93,15 @@ get_header(); ?>
 
         <section class="closing-quote">
           <div class="container-fluid px-0">
-            <div class="row no-gutters">
-              <div class="col-lg-3">
+            <div class="row no-gutters py-4 justify-content-center ">
+              <div class="col-lg-2">
                 <img class="img-full-width d-none d-lg-block" src="<?php the_field('imagen_cita') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-lg-6 text-center px-5 align-self-center animate-element slide-up negative-margin">
-                <div class="pb-5 mb-5"><?php the_field('texto_cita') ;?></div>
+              <div class="col-lg-8 text-center px-5 align-self-center animate-element slide-up negative-margin">
+                <div class="pb-5 mb-5 quote-text2"><?php the_field('texto_cita') ;?></div>
                 <img class="img-fluid quote-image-close" src="<?php the_field('imagen_dao') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-lg-3">
+              <div class="col-lg-2">
                 <img class="img-full-width" src="<?php the_field('imagen_cita2') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->

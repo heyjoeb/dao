@@ -45,11 +45,11 @@ get_header(); ?>
             <div class="row no-gutters animate-element slide-up">
               <div class="col-12">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-12 text-center py-5 my-5">
-                      <p class="quote-text mb-0">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center py-5 my-5">
+                      <div class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
-                      </p>
+                      </div>
                     </div><!-- .col -->
                   </div><!-- .row -->
                 </div><!-- .container -->
@@ -61,19 +61,44 @@ get_header(); ?>
 
         <section class="green-row">
           <div class="container-fluid">
-            <div class="row animate-element slide-up">
-              <div class="col-12 text-center py-5 my-5">
-              <?php the_field('texto_cita_verde') ;?>
+            <div class="row animate-element slide-up justify-content-center">
+              <div class="col-lg-6 text-center py-5 my-5">
+               <p>
+               <?php the_field('texto_cita_verde') ;?>
+               </p>
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- .green-row -->
 
+        <section class="causes a-section">
+          <div class="container">
+            <div class="row animate-element slide-up">
+              <div class="col-md-12">
+                <h2 class="text-center"><?php the_field('titulo_causas') ;?></h2>
+              </div>
+              <?php
+                // check if the repeater field has rows of data
+                if( have_rows('causas') ):
+                // loop through the rows of data
+                  while ( have_rows('causas') ) : the_row();?>
+                <div class="col-md-4 my-5 causes-wrapper">
+                  <?php the_sub_field('causa') ;?>
+                </div><!-- .col -->
+                  <?php endwhile;
+              else :
+              // no rows found
+              endif;
+              ?>
+            </div><!-- .row -->
+          </div><!-- .container -->
+        </section><!-- .causes -->
+
         <section class="closer-image a-section">
           <div class="container-fluid">
             <div class="row animate-element slide-up">
               <div class="col-12 text-center">
-              <img class="img-fluid" src="<?php the_field('imagen_dao') ;?>" alt="">
+              <img class="img-fluid" src="<?php the_field('imagen_dao_closer') ;?>" alt="">
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->

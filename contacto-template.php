@@ -42,20 +42,20 @@ get_header(); ?>
 
         <section class="info-contacto section-tan a-section">
           <div class="container">
-            <div class="row animate-element slide-up">
-              <div class="col-12 text-center mb-5 pb-5 contact-items">
+            <div class="row animate-element slide-up justify-content-center">
+              <div class="col-md-6 mb-5 pb-5 contact-items">
                 <ul>
-                  <li>
-                    <h2>Contacto</h2>
-                    <?php the_field('direccion') ;?>
+                  <li class="row justify-content-center">
+                    <h2 class="col-3"><?php the_field('direccion_titulo') ;?></h2>
+                    <span class="col-6 item-contact"><?php the_field('direccion') ;?></span>
                   </li>
-                  <li>
-                    <h2>Teléfono</h2>
-                    <?php the_field('telefono') ;?>
+                  <li class="row justify-content-center">
+                    <h2 class="col-3"><?php the_field('telefono_titulo') ;?></h2>
+                    <span class="col-6 item-contact align-self-"><?php the_field('telefono') ;?></span>
                   </li>
-                  <li>
-                    <h2>Email</h2>
-                    <?php the_field('email') ;?>
+                  <li class="row justify-content-center">
+                    <h2 class="col-3"><?php the_field('email_titulo') ;?></h2>
+                    <span class="col-6 item-contact"><?php the_field('email') ;?></span>
                   </li>
                 </ul>
               </div><!-- .col -->

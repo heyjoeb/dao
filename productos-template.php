@@ -15,9 +15,11 @@ get_header(); ?>
 		        	while ( have_rows('slides') ) : the_row();?>
                 	<div class="main-slider-slide">
 	                  <article class="animate-element slide-up">
-	                    <h1><?php the_sub_field('texto') ;?></h1>
+	                    <div class="article-wrapper">
+                      <h1><?php the_sub_field('texto') ;?></h1>
                       <p class="autor"><?php the_sub_field('autor') ;?></p>
                       <p class="cargo"><?php the_sub_field('cargo') ;?></p>
+                      </div>
 	                  </article>
 	                  <picture>
 	                    <source media="(max-width: 575px)" srcset="<?php the_sub_field('imagen_sm') ;?>">
@@ -75,11 +77,11 @@ get_header(); ?>
 
         <section class="quote-with-image white">
           <div class="container">
-            <div class="row animate-element slide-up text-center text-md-left">
-              <div class="col-md-4">
+            <div class="row animate-element slide-up text-center text-md-left justify-content-center align-items-center">
+              <div class="col-md-3">
                 <img class="img-fluid mb-5 mb-md-0" src="<?php the_field('imagen_cita') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-md-8">
+              <div class="col-md-7">
                 <?php the_field('texto_cita') ;?>
               </div><!-- .col -->
             </div><!-- .row -->
@@ -105,7 +107,9 @@ get_header(); ?>
               // loop through the rows of data
                 while ( have_rows('imagenes_caracteristicas') ) : the_row();?>
                 <div class="col-md-4 text-center">
-                  <img class="img-fluid mb-5 mb-md-0" src="<?php the_sub_field('imagen_caracteristica') ;?>" alt="">
+                  <a target="_blank" href="<?php the_sub_field('link_caracteristica') ;?>">
+                    <img class="img-fluid mb-5 mb-md-0" src="<?php the_sub_field('imagen_caracteristica') ;?>" alt="">
+                  </a>
                 </div><!-- .col -->
               <?php endwhile;
               else :

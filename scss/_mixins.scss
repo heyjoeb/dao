@@ -34,9 +34,9 @@
   }
 }
 @mixin lg-text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   @include media-breakpoint-down(xl) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 // -------------------------------    COLORS
@@ -45,6 +45,10 @@ $gray: #282828;
 $green: #266452;
 $black: #131313;
 $light-gray: #696969;
+$yellow: #FBAE16;
+$orange: #F1522F;
+$light-green: #91C640;
+$default-gray: #5b5b5b;
 // -------------------------------  ANIMATIONS
 .animate-element {
   opacity: 0;
