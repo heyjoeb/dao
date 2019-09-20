@@ -12,6 +12,13 @@
       width: 185px;
     }
   }
+  .navbar-collapse {
+    @include effect-all;
+    &.show {
+      @include effect-all;
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
 }
 .is-scrolling {
   .navbar {
@@ -22,6 +29,11 @@
     img {
       @include effect-all;
       width: 120px;
+    }
+  }
+  .navbar-collapse {
+    &.show {
+      background-color: transparent;
     }
   }
 }

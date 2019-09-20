@@ -7,6 +7,9 @@ html, body {
 strong {
   font-weight: 700;
 }
+sup {
+  font-size: 0.6rem;
+}
 .quote-text {
   @include lg-text;
   font-family: 'PT Serif', serif;

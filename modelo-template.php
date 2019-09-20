@@ -49,7 +49,7 @@ get_header(); ?>
                 <?php the_field('texto_imagen_intro') ;?>
               </div><!-- .col -->
               <div class="col-md-12 text-center">
-                <p class="txt-highlight mb-0 pt-5"><?php the_field('texto_intro_cierre') ;?></p>
+                <div class="txt-highlight mb-0 pt-5"><?php the_field('texto_intro_cierre') ;?></div>
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
@@ -65,7 +65,7 @@ get_header(); ?>
                   <div class="row animate-element slide-up justify-content-center">
                     <div class="col-lg-10 py-4 my-4 text-center">
                       <div class="quote-text mb-0">
-                        <?php the_field('texto_cita') ;?>
+                        <?php the_field('texto_cita1') ;?>
                         <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>
                       </div>
 
