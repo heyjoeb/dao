@@ -46,7 +46,7 @@ get_header(); ?>
               <div class="col-12">
                 <div class="container">
                   <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center py-5 my-5">
+                    <div class="col-lg-8 text-center py-4 my-4">
                       <div class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
                       </div>
@@ -62,7 +62,7 @@ get_header(); ?>
         <section class="green-row">
           <div class="container-fluid">
             <div class="row animate-element slide-up justify-content-center">
-              <div class="col-lg-6 text-center py-5 my-5">
+              <div class="col-lg-6 text-center pt-3 pb-2 mt-3 mb-2">
                <p>
                <?php the_field('texto_cita_verde') ;?>
                </p>

@@ -63,7 +63,7 @@ get_header(); ?>
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
                   <div class="row animate-element slide-up justify-content-center">
-                    <div class="col-lg-10 py-5 my-5 text-center">
+                    <div class="col-lg-10 py-4 my-4 text-center">
                       <div class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
                         <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>
@@ -81,7 +81,7 @@ get_header(); ?>
         <section class="quote-with-image green text-center">
           <div class="container">
             <div class="row animate-element slide-up justify-content-center align-items-center">
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <img class="img-fluid mb-5 mb-md-0" src="<?php the_field('imagen_cita_verde') ;?>" alt="">
               </div><!-- .col -->
               <div class="col-md-7">

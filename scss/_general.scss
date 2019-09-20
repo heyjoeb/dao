@@ -2,6 +2,7 @@
 html, body {
   font-family: 'Lato', sans-serif;
   color: $default-gray;
+  font-size: 18px;
 }
 strong {
   font-weight: 700;
@@ -15,6 +16,9 @@ strong {
   }
   p {
     font-weight: 400;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 .quote-text2 {
@@ -73,6 +77,19 @@ body {
   background-color: #eaeaea;
   p {
     font-weight: 600;
+  }
+}
+.home {
+  .quote-text {
+    @include lg-text;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    span {
+      display: block;
+    }
+    p {
+      font-weight: 400;
+    }
   }
 }
 .updates {
@@ -177,7 +194,7 @@ body {
   }
 }
 .quote-with-image {
-  padding: 70px 0;
+  padding: 40px 0;
   h1, h2, h3, h4, h5 {
     @include hero-text;
     font-weight: 700;
@@ -210,28 +227,32 @@ body {
   }
 }
 .como {
+  .green-row {
+    background: rgb(44,120,98);
+    background: linear-gradient(180deg, rgba(44,120,98,1) 45%, rgba(28,71,59,1) 100%);
+  }
   .process {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
     padding: 100px 0;
     .step-button {
+      opacity: 1;
+      position: relative;
+      background-image: url('../daoTheme/images/bg-step.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 227px;
+      height: 288px;
       border: 0;
-      background-color: $light-green;
-      color: $gray;
-      border-radius: 50%;
-      width: 230px;
-      height: 230px;
-      padding: 15px;
-      border: 10px solid $tan;
+      background-color: transparent;
       @include effect_all;
       &:hover, &:active, &:focus {
-        background-color: $green;
-        color: #fff;
+        opacity: 0.7;
         @include effect_all;
       }
-      span {
-        display: block;
+      &.last {
+        background-image: url('../daoTheme/images/bg-step-last.png');
       }
     }
     .step-number {
@@ -239,17 +260,20 @@ body {
       font-weight: 700;
       color: $orange;
       margin-bottom: 10px;
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      background-color: $tan;
-      border-radius: 50%;
+      display: block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      margin-left: -25.5px;
     }
     .step-title {
-      @include lg-text;
+      font-size: 1.2rem;
+      margin-top: -20px;
+      display: block;
+      padding: 0 15px;
     }
     .modal-header {
       border-top: 10px solid $light-green;

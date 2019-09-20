@@ -68,8 +68,8 @@ get_header(); ?>
               <div class="col-12">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
                 <div class="container">
-                  <div class="row animate-element slide-up">
-                    <div class="col-12 py-5 my-5 text-center">
+                  <div class="row animate-element slide-up justify-content-center">
+                    <div class="col-lg-8 py-5 my-5 text-center">
                       <p class="quote-text mb-0">
                         <?php the_field('texto_cita') ;?>
                         <span class="txt-highlight"><?php the_field('texto_cita_resaltado') ;?></span>

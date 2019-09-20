@@ -81,17 +81,17 @@ get_header(); ?>
               <div class="col-md-3">
                 <img class="img-fluid mb-5 mb-md-0" src="<?php the_field('imagen_cita') ;?>" alt="">
               </div><!-- .col -->
-              <div class="col-md-7">
+              <div class="col-md-7 text-center">
                 <?php the_field('texto_cita') ;?>
               </div><!-- .col -->
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- quote-with-image -->
 
-        <section class="quote section-tan py-5">
+        <section class="quote section-tan pt-4 pb-2">
           <div class="container">
             <div class="row justify-content-center animate-element slide-up">
-              <div class="col-lg-8 text-center">
+              <div class="col-lg-10 text-center">
                 <?php the_field('texto_cita2') ;?>
               </div><!-- col -->
             </div><!-- .row -->

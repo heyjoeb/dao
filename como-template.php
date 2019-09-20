@@ -60,19 +60,21 @@ get_header(); ?>
               <div class="col-12 text-center">
                 <img class="img-fluid dao-absolute" src="<?php the_field('imagen_dao_circle') ;?>" alt="">
                 <img class="img-fluid" src="<?php the_field('imagen_seccion') ;?>" alt="">
-                <div class="container mt-5 mt-sm-0">
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .container -->
+          <div class="container-fluid section-tan">
+            <div class="container mt-5 mt-sm-0">
                   <div class="row justify-content-center">
-                    <div class="col-md-8 text-center py-5 my-5 a-quote">
+                    <div class="col-md-8 text-center py-3 my-3 a-quote">
                       <?php the_field('texto_cita') ;?>
                     </div><!-- .col -->
                   </div><!-- .row -->
                 </div><!-- .container -->
-              </div><!-- .col -->
-            </div><!-- .row -->
-          </div><!-- .container -->
+          </div>
         </section><!-- full-width-img -->
 
-        <section class="green-row py-5">
+        <section class="green-row py-4">
           <div class="container-fluid px-0">
             <div class="row no-gutters animate-element slide-up">
               <div class="col-12 text-center">
@@ -90,7 +92,7 @@ get_header(); ?>
                 if( have_rows('pasos') ):
                 // loop through the rows of data
                   while ( have_rows('pasos') ) : the_row();?>
-                  <div class="col-md-4 text-center step-wrapper">
+                  <div class="col-12 text-center step-wrapper">
                     <button class="step-button text-center" data-toggle="modal" data-target="#<?php the_sub_field('link_paso') ;?>">
                       <span class="step-number"><?php the_sub_field('numero_paso') ;?></span>
                       <span class="step-title"><?php the_sub_field('titulo_paso') ;?></span>
@@ -118,6 +120,29 @@ get_header(); ?>
                 // no rows found
                 endif;
               ?>
+              <div class="col-12 text-center step-wrapper">
+                    <button class="step-button text-center last" data-toggle="modal" data-target="#<?php the_field('link_paso_final') ;?>">
+                      <span class="step-number"><?php the_field('numero_paso_final') ;?></span>
+                      <span class="step-title"><?php the_field('titulo_paso_final') ;?></span>
+                    </button>
+                  </div><!-- .col -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="<?php the_field('link_paso_final') ;?>" tabindex="-1" role="dialog" aria-labelledby="<?php the_field('link_paso_final') ;?>Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="<?php the_field('link_paso_final') ;?>Label"><?php the_field('titulo_paso_final') ;?></h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <?php the_field('texto_paso_final') ;?>
+                          <div class="daoIcon"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div><!-- .row -->
           </div><!-- .container -->
         </section><!-- .process -->

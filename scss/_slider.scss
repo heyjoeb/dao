@@ -6,7 +6,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 10%);
     };
   }
   &-slide {
@@ -15,13 +15,17 @@
   article {
     position: absolute;
     z-index: 1;
-    width: 760px;
+    width: 850px;
     text-align: center;
     overflow: hidden;
     left: 50%;
-    margin-left: -380px;
+    margin-left: -425px;
     color: #fff;
     bottom: 5%;
+    @include media-breakpoint-down(md) {
+      width: 90%;
+      margin-left: -45%;
+    }
     @include media-breakpoint-down(sm) {
       bottom: 10%;
     }
@@ -32,6 +36,10 @@
   h1 {
     @include hero-text;
     font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.57);
+  }
+  p {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.57);
   }
   .author-wrapper {
     float: right;
@@ -81,10 +89,20 @@
 .slider-nav-arrows {
   display: none;
 }
+.nuestra-tierra {
+  article {
+    bottom: 35%;
+  }
+}
+.modelo {
+  article {
+    bottom: 15%;
+  }
+}
 .productos {
   picture {
     &:before {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 10%);
     };
   }
   .main-slider {
@@ -116,7 +134,16 @@
 .como {
   .main-slider {
     article {
+      width: 580px;
+      margin-left: 0;
       overflow: visible;
+      left: auto;
+      right: 20%;
+      bottom: 35%;
+      @include media-breakpoint-down(lg) {
+        right: 0%;
+        bottom: 15%;
+      }
     }
     h1 {
       font-family: 'PT Serif', serif;

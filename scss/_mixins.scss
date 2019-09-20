@@ -25,18 +25,18 @@
 }
 // -------------------------------  TYPE
 @mixin hero-text {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   @include media-breakpoint-down(xl) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   @include media-breakpoint-down(md) {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 @mixin lg-text {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   @include media-breakpoint-down(xl) {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 // -------------------------------    COLORS
