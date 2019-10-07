@@ -44,7 +44,7 @@ get_header(); ?>
 
         <section class="a-section intro-col">
           <div class="container">
-            <div class="row animate-element slide-up">
+            <div class="row animate-element slide-up justify-content-center">
               <?php
               // check if the repeater field has rows of data
               if( have_rows('columnas') ):

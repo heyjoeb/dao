@@ -110,6 +110,9 @@ get_header(); ?>
                   <a target="_blank" href="<?php the_sub_field('link_caracteristica') ;?>">
                     <img class="img-fluid mb-5 mb-md-0" src="<?php the_sub_field('imagen_caracteristica') ;?>" alt="">
                   </a>
+                  <a target="_blank" href="<?php the_sub_field('link_specs') ;?>" class="specs-products d-inline-block mt-4">
+                    <?php the_sub_field('text_specs') ;?>
+                  </a>
                 </div><!-- .col -->
               <?php endwhile;
               else :

@@ -41,9 +41,16 @@
     <![endif]-->
     <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
       <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/daoLogo.png" alt="DAO - Del LLano Alto Oléico">
-      </a>
+      <?php
+        if (ICL_LANGUAGE_CODE == "en") { ?>
+          <a class="navbar-brand" href="/?lang=en">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/daoLogo-eng.png" alt="DAO - Del LLano Alto Oléico">
+          </a>
+        <?php } else { ?>
+          <a class="navbar-brand" href="/">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/daoLogo.png" alt="DAO - Del LLano Alto Oléico">
+          </a>
+        <?php } ?>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar top-bar"></span>
         <span class="icon-bar middle-bar"></span>
